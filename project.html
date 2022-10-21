@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, user-scalable=no" >
+        <title>BMI Calculator</title>
+    </head><style>
+:root, body {
+    width:100%; height:100%;
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    tap-highlight-color: transparent;
+    text-align: center;
+    background-color: #2e2e2e;
+    color: white;
+    text-shadow: 0 0 10px black;
+    font: bold 19px sans-serif;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+.formula, .result {
+    color: gold;
+    font-size: 22px;
+}
+input {
+    outline: none;
+text-align:center;
+    border: 2px solid black;
+    color:black;
+    height: 25px;
+}
+.calc {
+    width: 95px;
+    height: 30px;
+    outline: none;
+    border: 2px solid black;
+    background-color: crimson;
+    transition: .5s;
+    color: inherit;
+    font: inherit;
+}
+.calc:hover {
+    background-color: black;
+}
+</style>
+<script>
+function init() {
+   var btn = document.querySelector(".calc");
+   var result = document.querySelector(".result");
+  
+   btn.addEventListener("click", function() {
+     var dbms = eval( document.getElementById("dbms").value);
+     var os = eval( document.getElementById("os").value);
+     var algo = eval( document.getElementById("algo").value);
+     var soft = eval( document.getElementById("soft").value);
+     var obm = eval( document.getElementById("obm").value);
+     var dbmslab = eval( document.getElementById("dbmslab").value);
+     var oslab = eval( document.getElementById("oslab").value);
+     var algolab = eval( document.getElementById("algolab").value);
+     var weblab = eval( document.getElementById("weblab").value);
+     
+    
+  
+    
+    if(dbms>0 && os>0 && algo>0 && soft>0 && obm>0 && dbmslab>0 && oslab>0 && algolab>0 && weblab>0) {
+        var sum=(dbms*4)+(os*4)+(algo*3)+(soft*3)+(obm*3)+(dbmslab*2)+(oslab*2)+(algolab*2)+(weblab*2);
+        result.innerText = sum/25;
+        res.innerText=strUser;
+    }
+    else {
+        result.innerText = "Wrong Input!"
+    }
+  }, false);
+}
+</script>
+    <body onload="init()">
+       <U><h1>SPI  CALCULATOR FOR 3RD SEM</h1></U>
+        <br /> <br />
+        
+        
+        <label for="DBMS">DBMS &nbsp; </label> 
+      
+        <select id="dbms">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+        <label for="OS">OS &nbsp; </label> 
+       
+        <select id="os">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+
+        <label for="ALGORITHMS">Algotithms &nbsp; </label> 
+       
+        <select id="algo">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+
+        
+
+
+
+        <label for="SOFT COUMPUTING">SOFT COMPUTING &nbsp;  </label> 
+        <select id="soft">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+
+        <label for="obm">object modeling &nbsp; </label> 
+        <select id="obm">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+
+        <label for="DBMS LAB">DBMS LAB &nbsp; </label> 
+       
+        <select id="dbmslab">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+        <label for="ALG0 LAB">ALGORITHMS LAB &nbsp; </label> 
+       
+        <select id="algolab">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+        <label for="OS LAB">OS LAB &nbsp; </label> 
+       
+        <select id="oslab">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+        <label for="WEB LAB">WEB LAB &nbsp; </label> 
+       
+        <select id="weblab">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B+</option>
+            <option value="7">B</option>
+            <option value="6">C</option>
+            <option value="4">D</option>
+            
+          </select>
+        <br /> <br /> <br />
+
+        <button class="calc">Calculate</button>
+        <br /> <br />
+        <p class="result">SPI : </p>
+        
+        <p class="res">CPI : </p>
+       
+
+
+  
+    </body>
+</html>
