@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, user-scalable=no" >
-        <title>SPI Calculator</title>
+        <title>BMI Calculator</title>
     </head><style>
 :root, body {
     width:100%; height:100%;
@@ -48,6 +48,7 @@ text-align:center;
 function init() {
    var btn = document.querySelector(".calc");
    var result = document.querySelector(".result");
+   var res = document.querySelector(".res");
   
    btn.addEventListener("click", function() {
      var dbms = eval( document.getElementById("dbms").value);
@@ -59,6 +60,8 @@ function init() {
      var oslab = eval( document.getElementById("oslab").value);
      var algolab = eval( document.getElementById("algolab").value);
      var weblab = eval( document.getElementById("weblab").value);
+     var sem1 = eval( document.getElementById("spi1").value);
+     var sem2 = eval( document.getElementById("spi2").value);
      
     
   
@@ -66,7 +69,7 @@ function init() {
     if(dbms>0 && os>0 && algo>0 && soft>0 && obm>0 && dbmslab>0 && oslab>0 && algolab>0 && weblab>0) {
         var sum=(dbms*4)+(os*4)+(algo*3)+(soft*3)+(obm*3)+(dbmslab*2)+(oslab*2)+(algolab*2)+(weblab*2);
         result.innerText = sum/25;
-        res.innerText=strUser;
+        res.innerText=(sem1+sem2+(sum/25))/3;
     }
     else {
         result.innerText = "Wrong Input!"
@@ -193,12 +196,17 @@ function init() {
             
           </select>
         <br /> <br /> <br />
-
+        <label for="sem1">SEM 1 SPI &nbsp; </label> 
+       <input type="number" id="spi1">
+       &nbsp;&nbsp;
+       <label for="sem2">SEM 2 SPI &nbsp; </label> 
+       <input type="number" id="spi2">
+       <br><br><br>
         <button class="calc">Calculate</button>
         <br /> <br />
-        <p class="result">SPI : </p>
+       <p> SPI: &nbsp;</p> <p class="result"> </p>
         
-        <p class="res">CPI : </p>
+        <p>CPI: &nbsp;</p><p class="res"> </p>
        
 
 
