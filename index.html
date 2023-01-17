@@ -79,7 +79,8 @@ function init() {
     if(dbms>0 && os>0 && algo>0 && soft>0 && obm>0 && dbmslab>0 && oslab>0 && algolab>0 && weblab>0) {
         var sum=(dbms*4)+(os*4)+(algo*3)+(soft*3)+(obm*3)+(dbmslab*2)+(oslab*2)+(algolab*2)+(weblab*2);
         result.innerText = sum/25;
-        res.innerText=((sem1*20)+(sem2*21)+(sum))/66;
+        var sem3=sum/25;
+        res.innerText=((sem1*20)+(sem2*21)+(sem3*25))/66;
     }
     else {
         result.innerText = "Wrong Input!"
