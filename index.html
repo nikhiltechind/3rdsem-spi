@@ -80,7 +80,8 @@ function init() {
         var sum=(dbms*4)+(os*4)+(algo*3)+(soft*3)+(obm*3)+(dbmslab*2)+(oslab*2)+(algolab*2)+(weblab*2);
         result.innerText = sum/25;
         var sem3=sum/25;
-        res.innerText=((sem1*20)+(sem2*21)+(sem3*25))/66;
+      var cp= ((sem1*20)+(sem2*21)+(sem3*25))/66;
+         res.innerText=cp.toFixed(2);
     }
     else {
         result.innerText = "Wrong Input!"
